@@ -16,5 +16,11 @@ public class Solution {
         Scanner scanner = new Scanner(System.in);
         String line = scanner.nextLine();
         //напишите тут ваш код
+        
+        URL url = new URL(line);
+        InputStream input = url.openStream();
+
+        Path temp = Files.createTempFile(null, null);
+        Files.write(temp, input.readAllBytes());
     }
 }
