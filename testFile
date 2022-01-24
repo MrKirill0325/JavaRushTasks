@@ -1,0 +1,19 @@
+public class Solution {
+    public static void main(String[] args) {
+        //напишите тут ваш код
+        String string = "Hello";
+        try(Scanner scanner = new Scanner(System.in)) {
+            List <String> list = Files.readAllLines(Paths.get(scanner.nextLine()));
+            for (String temp : list){
+                if (temp != "." || temp != ","|| temp!= " "){
+                    System.out.print(temp);
+                }
+            }
+        }catch (IOException e){
+            System.out.println(123);
+        }
+
+    }
+}
+
+D:\Shornikov\2.txt
